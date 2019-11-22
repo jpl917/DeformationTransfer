@@ -46,9 +46,8 @@ MESSAGE(STATUS "SuiteSparse_LIBS: ${SuiteSparse_LIBRARIES}")
 
 include_directories("/usr/include/eigen3")
 
-set(Trimesh2_DIR "/home/jpl/Programs/trimesh2")
-set(Trimesh2_INCLUDE_DIRS "/home/jpl/Programs/trimesh2/include/")
-set(Trimesh2_LIB_DIRS "/home/jpl/Programs/trimesh2/lib.Linux64/libtrimesh.a")
+set(Trimesh2_INCLUDE_DIRS ${PROJECT_SOURCE_DIR}/3rdparty/trimesh2/include/)
+set(Trimesh2_LIB_DIRS ${PROJECT_SOURCE_DIR}/3rdparty/trimesh2/lib.Linux64/libtrimesh.a)
 include_directories(${Trimesh2_INCLUDE_DIRS})
 
 add_executable(main main.cpp)
